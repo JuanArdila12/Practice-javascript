@@ -1,63 +1,77 @@
 // Code of square
 console.group("Squares")
-const sideSquare = 5;
-console.log("the sides of the square measure: " + sideSquare + " CMS")
 
-const perimeterSquare = sideSquare * 4
+function perimeterSquare(side){
+    return side * 4
+} 
 
-console.log("The perimeter of the square is: " + perimeterSquare + " CMS")
 
-const areaSquare = sideSquare * sideSquare
 
-console.log("The area of the square is: " + areaSquare + " CMS^2")
+function areaSquare(side){
+    return side * side 
+} 
+
+
 console.groupEnd()
 
 // Code of triangle
 console.group("Triangles")
-const sideTriangle1 = 6;
-const sideTriangle2 = 6;
-const baseTriangle = 4;
 
 
-console.log(
-    "the sides of the triangle measure: " 
-    + sideTriangle1 
-    + " CMS, " 
-    + sideTriangle2 
-    + " CMS , " 
-    + baseTriangle 
-    + " CMS"
-)
-const heightTriangle = 5.5;
-console.log("the height of the triangle is: " + heightTriangle + " CMS");
+function perimeterTriangle(side1,side2, baseTriangle){
+    return side1 + side2 + baseTriangle
+} 
 
-const perimeterTriangle = sideTriangle1 + sideTriangle2 + baseTriangle
 
-console.log("the perimeter of the triangle is: " + perimeterTriangle + " CMS");
 
-const areaTriangle = (baseTriangle * heightTriangle) / 2
+function areaTriangle(baseTriangle,heightTriangle){
+    return (baseTriangle * heightTriangle) / 2
+} 
 
-console.log("the area of the triangle is: " + areaTriangle + " CMS^2")
+
 
 console.groupEnd()
 
 // Code of circles
 console.group("Circles")
 
-const radioCircle = 4;
-console.log("the radio of circle is: " + radioCircle + " CMS")
 
-const diameterCircle = radioCircle * 2 
-console.log("the diameter of circle is: " + diameterCircle + " CMS")
+function diameterCircle(radioCircle){
+    return radioCircle * 2 
+}
 
 const PI = Math.PI
-console.log("PI is: " + PI)
 
-const perimeterCircle = diameterCircle * PI
 
-console.log("the perimeter of circle is: " + perimeterCircle + " CMS")
+function perimeterCircle(radioCircle){
+    const diameter = diameterCircle(radioCircle)
+    return diameter * PI
+}
 
-const areaCircle = (radioCircle * radioCircle) * PI
-console.log("the area of circle is: " + areaCircle + " CMS")
+
+function areaCircle(radioCircle){
+    return (radioCircle * radioCircle) * PI
+} 
+
 
 console.groupEnd()
+
+
+// Functions and interactions with HTML
+
+function calculatePerimeterSquare(){
+    const input = document.getElementById("InputSquare")
+    const value = input.value
+
+    const perimeter = perimeterSquare(value)
+    alert(perimeter)
+}
+
+function calculateAreaSquare(){
+    const input = document.getElementById("InputSquare")
+    const value = input.value
+    const resArea = document.getElementById("aResult")
+    const area = areaSquare(value)
+    resArea.innerHTML = area + " cm"
+    // alert(area)
+}
