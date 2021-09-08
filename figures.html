@@ -17,8 +17,28 @@
         <div class="my-4 mx-4 rounded-lg shadow-lg ">
             <div class="">   
                 <h1 class="text-2xl flex justify-center my-4">Square</h1>
-                <div>asdsda</div>
-                <div>dassdadas</div>
+                <div class="flex justify-center text-center ">
+                    <form>
+                        <label for="InputSquare">
+                            Write how long the sides of your square:
+                        </label>
+                        <br>
+                        <input class="my-2 shadow focus:border-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-transparent" id="InputSquare" type="number" placeholder="number">
+                        <br>
+                        <div class="grid grid-flow-row">
+                            <button class=" mx-4 my-3 rounded-md h-12 bg-blue-200 hover:bg-blue-400 hover:text-white border text-gray-800"type="button" onclick="calculatePerimeterSquare()">
+                                Calculate the perimeter of square
+                            </button>
+                            <button class="mx-4 my-2 rounded-md h-12 bg-blue-200 hover:bg-blue-400 hover:text-white border text-gray-800" type="button" onclick="calculateAreaSquare()">
+                                Calculate the area of square
+                            </button>
+                        </div>
+                        
+                        <p id="pResult"></p>
+                        <p id="aResult"></p>
+                        
+                    </form>
+                </div>
             </div>
         </div>
         <div class=" my-4 mx-4 rounded-lg shadow-lg">

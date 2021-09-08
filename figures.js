@@ -62,9 +62,11 @@ console.groupEnd()
 function calculatePerimeterSquare(){
     const input = document.getElementById("InputSquare")
     const value = input.value
-
+    const resPerimeter = document.getElementById("pResult")
     const perimeter = perimeterSquare(value)
-    alert(perimeter)
+    resPerimeter.innerHTML = "Resultado perimetro: " + perimeter + " cm"
+
+    
 }
 
 function calculateAreaSquare(){
@@ -72,6 +74,6 @@ function calculateAreaSquare(){
     const value = input.value
     const resArea = document.getElementById("aResult")
     const area = areaSquare(value)
-    resArea.innerHTML = area + " cm"
+    resArea.innerHTML = "Resultado area: " + area + " cm"
     // alert(area)
 }
