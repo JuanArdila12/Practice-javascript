@@ -14,6 +14,7 @@
         <div class="md:col-span-3 text-3xl font-bold bg-gray-600 text-white flex justify-center p-16 ">
             Geometric figures
         </div>
+        <!--  -->
         <div class="my-4 mx-4 rounded-lg shadow-lg ">
             <div class="">   
                 <h1 class="text-2xl flex justify-center my-4">Square</h1>
@@ -41,38 +42,70 @@
                 </div>
             </div>
         </div>
-        <div class=" my-4 mx-4 rounded-lg shadow-lg">
+        <!--  -->
+        <div class="my-4 mx-4 rounded-lg shadow-lg ">
             <div class="">   
                 <h1 class="text-2xl flex justify-center my-4">Triangle</h1>
-                <div>asdsda</div>
-                <div>dassdadas</div>
+                <div class="flex justify-center text-center ">
+                    <form>
+                        <label for="InputTriangle1">
+                            Write how long the sides of your Triangle:
+                        </label>
+                        <br>
+                        <input class="my-2 shadow focus:border-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-transparent" id="InputTriangle1" type="number" placeholder="number">
+                        <label for="InputTriangle2">
+                            Write how long the sides of your Triangle:
+                        </label>
+                        <input class="my-2 shadow focus:border-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-transparent" id="InputTriangle2" type="number" placeholder="number">
+                        <label for="InputTriangle3">
+                            Write how long the base of your Triangle:
+                        </label>
+                        <input class="my-2 shadow focus:border-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-transparent" id="InputTriangle3" type="number" placeholder="number">
+                        <label for="InputTriangle4">
+                            Write how long the height of your Triangle:
+                        </label>
+                        <input class="my-2 shadow focus:border-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-transparent" id="InputTriangle4" type="number" placeholder="number">
+                        <br>
+                        <div class="grid grid-flow-row">
+                            <button class=" mx-4 my-3 rounded-md h-12 bg-blue-200 hover:bg-blue-400 hover:text-white border text-gray-800"type="button" onclick="calculatePerimeterTriangle()">
+                                Calculate the perimeter of Triangle
+                            </button>
+                            <button class="mx-4 my-2 rounded-md h-12 bg-blue-200 hover:bg-blue-400 hover:text-white border text-gray-800" type="button" onclick="calculateAreaTriangle()">
+                                Calculate the area of Triangle
+                            </button>
+                        </div>
+                        <p id="TpResult"></p>
+                        <p id="TaResult"></p>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class=" my-4 mx-4 rounded-lg shadow-lg">
+        <!--  -->
+        <div class="my-4 mx-4 rounded-lg shadow-lg ">
             <div class="">   
                 <h1 class="text-2xl flex justify-center my-4">Circle</h1>
-                <div>asdsda</div>
-                <div>dassdadas</div>
+                <div class="flex justify-center text-center ">
+                    <form>
+                        <label for="InputRadio">
+                            Write the radio of circle:
+                        </label>
+                        <br>
+                        <input class="my-2 shadow focus:border-blue-200 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-transparent" id="InputRadio" type="number" placeholder="number">
+                        <div class="grid grid-flow-row">
+                            <button class=" mx-4 my-3 rounded-md h-12 bg-blue-200 hover:bg-blue-400 hover:text-white border text-gray-800"type="button" onclick="calculatePerimeterCircle()">
+                                Calculate the perimeter of Circle
+                            </button>
+                            <button class="mx-4 my-2 rounded-md h-12 bg-blue-200 hover:bg-blue-400 hover:text-white border text-gray-800" type="button" onclick="calculateAreaCircle()">
+                                Calculate the area of Circle
+                            </button>
+                        </div>
+                        <p id="ToResult"></p>
+                        <p id="TooResult"></p>
+                    </form>
+                </div>
             </div>
         </div>
       </div>
 
-    <!-- <section>
-        <h2>Calculate the area and perimeter of square</h2>
-        <form>
-            <label for="InputSquare">
-                Write how long the sides of your square:
-            </label>
-            <input id="InputSquare" type="number">
-            <button type="button" onclick="calculatePerimeterSquare()">
-                Calculate the perimeter of square
-            </button>
-            <button type="button" onclick="calculateAreaSquare()">
-                Calculate the area of square
-            </button>
-
-            <p id="aResult"></p>
-        </form>
-    </section> -->
 </body>
 </html>

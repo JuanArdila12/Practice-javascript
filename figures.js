@@ -64,7 +64,7 @@ function calculatePerimeterSquare(){
     const value = input.value
     const resPerimeter = document.getElementById("pResult")
     const perimeter = perimeterSquare(value)
-    resPerimeter.innerHTML = "Resultado perimetro: " + perimeter + " cm"
+    resPerimeter.innerHTML = "Perimeter result: " + perimeter + " cm"
 
     
 }
@@ -74,6 +74,48 @@ function calculateAreaSquare(){
     const value = input.value
     const resArea = document.getElementById("aResult")
     const area = areaSquare(value)
-    resArea.innerHTML = "Resultado area: " + area + " cm"
+    resArea.innerHTML = "Area result: " + area + " cm"
     // alert(area)
+}
+
+function calculatePerimeterTriangle(){
+    const input1 = document.getElementById("InputTriangle1")
+    const value1 = Number(input1.value)
+    const input2 = document.getElementById("InputTriangle2")
+    const value2 = Number(input2.value)
+    const input3 = document.getElementById("InputTriangle3")
+    const value3 = Number(input3.value)
+    const perimeter = perimeterTriangle(value1, value2, value3)
+    
+    const resPerimeter = document.getElementById("TpResult")
+    resPerimeter.innerHTML = "Perimeter result: " + perimeter + " cm"
+}
+
+function calculateAreaTriangle(){
+    const input3 = document.getElementById("InputTriangle3")
+    const value3 = Number(input3.value)
+    const input4 = document.getElementById("InputTriangle3")
+    const value4 = Number(input4.value)
+    const area = areaTriangle(value3, value4)
+    
+    const resPerimeter = document.getElementById("TaResult")
+    resPerimeter.innerHTML = "Perimeter result: " + area + " cm"
+}
+
+function calculatePerimeterCircle(){
+    const input1 = document.getElementById("InputRadio")
+    const value1 = Number(input1.value)
+    const perimeter = diameterCircle(value1)
+    
+    const resPerimeter = document.getElementById("ToResult")
+    resPerimeter.innerHTML = "Perimeter result: " + perimeter + " cm"
+}
+
+function calculateAreaCircle(){
+    const input1 = document.getElementById("InputRadio")
+    const value1 = Number(input1.value)
+    const area = areaCircle(value1)
+    
+    const resPerimeter = document.getElementById("TooResult")
+    resPerimeter.innerHTML = "Perimeter result: " + area + " cm"
 }
