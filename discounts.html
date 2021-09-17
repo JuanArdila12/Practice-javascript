@@ -19,7 +19,24 @@
     <div class="flex ">
         <div class="mx-auto pt-12 ">
             <div class="card w-80 media">
-                asdsda
+                <div class="flex">
+                    <div class="text-center">
+                        <h2 class=" pt-16">Calculate the price to pay of your products with discount</h2>
+                    <form class="pt-8" action="">
+                        <label for="InputPrice">Insert the price of your product: </label>
+                        <br>
+                        <input class="input-figure appearance-none focus:outline-none" id="InputPrice" type="number">
+                        <br>
+                        <label for="InputDiscount">Insert the discount of your product: </label>
+                        <input class="input-figure  appearance-none focus:outline-none" id="InputDiscount" type="number">
+                        <br>
+                        <div class="pt-4">
+                            <button class="button-discounts bg-white" type="button" onclick="onClickButtonPriceDiscount()">Calcuta the price with discount</button>
+                        </div>
+                        <p class="pt-4" id="ResultPrice"></p>
+                    </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

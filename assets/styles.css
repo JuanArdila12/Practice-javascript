@@ -21,6 +21,21 @@
 
 }
 
+.input-figure{
+    border-radius: 10px;
+    height: 30px;
+    width: 24vh;
+    border-style: none;
+    
+}
+
+.button-discounts{
+    border-radius: 10px;
+    height: 45px;
+    width: 300px;
+
+}
+
 @media (min-width: 768px) {
     .media{
         width: 400px;
